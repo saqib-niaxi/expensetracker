@@ -1,0 +1,9 @@
+node_modules
+.vercel
+.env.local
+.env.development
+.docusaurus
+.nyc_output
+*.log
+dist
+build
