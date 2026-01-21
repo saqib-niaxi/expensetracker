@@ -127,9 +127,9 @@ function displayExpenses() {
     filteredExpenses.forEach(expense => {
         const row = document.createElement('tr');
         row.innerHTML = `
-            <td>${formatDate(expense.date)}</td>
-            <td>${escapeHtml(expense.description)}</td>
-            <td class="amount">Rs${parseFloat(expense.amount).toFixed(2)}</td>
+            <td data-label="Date:">${formatDate(expense.date)}</td>
+            <td data-label="Description:">${escapeHtml(expense.description)}</td>
+            <td class="amount" data-label="Amount:">Rs${parseFloat(expense.amount).toFixed(2)}</td>
             <td class="action-cell">
                 <button class="delete-btn" onclick="deleteExpense(${expense.id})">Delete</button>
             </td>
